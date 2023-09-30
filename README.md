@@ -1,6 +1,6 @@
 # PROYECTO DESARROLLO APP MOVIL
 
- [REPOSITORIO](https://github.com/Mlermaa/App_Techdesk.git)
+LINK DEL REPOSITORIO TRABAJADO EN KOTLIN:  [REPOSITORIO](https://github.com/Mlermaa/App_Techdesk.git)
 
   
  <br>
