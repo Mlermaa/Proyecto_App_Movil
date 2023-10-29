@@ -1,7 +1,5 @@
 # PROYECTO DESARROLLO APP MOVIL
 
-LINK DEL REPOSITORIO TRABAJADO EN KOTLIN:  [REPOSITORIO](https://github.com/Mlermaa/App_Techdesk.git)
-
   
  <br>
   Presentado por: Lerma Aldana Mario Gerley
