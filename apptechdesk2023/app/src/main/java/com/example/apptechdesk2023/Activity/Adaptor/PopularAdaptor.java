@@ -1,5 +1,7 @@
 package com.example.apptechdesk2023.Activity.Adaptor;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,11 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.apptechdesk2023.Activity.Domain.ProductosDomain;
+import com.example.apptechdesk2023.Activity.ShowDatailMainActivity;
 import com.example.apptechdesk2023.R;
 
 import java.util.ArrayList;
@@ -39,6 +41,16 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.pic);
+
+        holder.addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(holder.itemView.getContext(), ShowDatailMainActivity.class);
+                intent.putExtra("object", popularProductos.get(position));
+                holder.itemView.getContext().startActivity(intent);
+
+            }
+        });
     }
 
     @Override

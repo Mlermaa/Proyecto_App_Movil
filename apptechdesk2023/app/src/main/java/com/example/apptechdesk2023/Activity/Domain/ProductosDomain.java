@@ -1,6 +1,8 @@
 package com.example.apptechdesk2023.Activity.Domain;
 
-public class ProductosDomain {
+import java.io.Serializable;
+
+public class ProductosDomain implements Serializable {
     private  String title;
     private  String pic;
     private String descrption;
