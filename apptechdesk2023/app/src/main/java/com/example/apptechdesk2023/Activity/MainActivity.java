@@ -1,16 +1,20 @@
 package com.example.apptechdesk2023.Activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.example.apptechdesk2023.Activity.Adaptor.CategoryAdaptor;
 import com.example.apptechdesk2023.Activity.Adaptor.PopularAdaptor;
 import com.example.apptechdesk2023.Activity.Domain.CategoryDomain;
 import com.example.apptechdesk2023.Activity.Domain.ProductosDomain;
 import com.example.apptechdesk2023.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -25,7 +29,26 @@ private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
 
         recyclerViewCategoryList();
         recyclerViewPopular();
+        bottomNavigation();
       }
+    private void bottomNavigation(){
+        FloatingActionButton floatingActionButton=findViewById(R.id.cartBtn);
+        LinearLayout homeBtn=findViewById(R.id.homeBtn);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,CartListActivity.class));
+            }
+        });
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,MainActivity.class));
+            }
+        });
+    }
+
 
       private void recyclerViewCategoryList(){
           LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);

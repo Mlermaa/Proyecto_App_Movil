@@ -23,6 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:text="title"
                 android:textAlignment="center"
                 android:textColor="#373b54"
@@ -44,6 +46,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="204dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 app:srcCompat="@drawable/cpu_1"
                 tools:srcCompat="@drawable/cpu_1" />
 
@@ -83,10 +87,12 @@
 
             <TextView
                 android:id="@+id/descriptionTxt"
-                android:layout_width="match_parent"
+                android:layout_width="357dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
                 android:text="Descripción"
                 android:textColor="#686767"
                 android:textSize="20sp"

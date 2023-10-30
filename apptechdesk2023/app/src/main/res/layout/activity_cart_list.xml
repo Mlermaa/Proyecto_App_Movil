@@ -7,8 +7,13 @@
     tools:context=".Activity.CartListActivity">
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,16 +24,21 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mi Carrito"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginRight="25dp"
+                android:text="Mi Carrito"
                 android:textAlignment="center"
                 android:textColor="#05858B"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,7 +50,7 @@
                 tools:layout_marginStart="16dp">
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -50,7 +60,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/TaxTxt"
+                    android:id="@+id/totalFeeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -72,7 +82,7 @@
                 tools:layout_marginStart="16dp">
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -82,7 +92,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/taxTxt"
+                    android:id="@+id/deliveryTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -104,7 +114,7 @@
                 tools:layout_marginStart="16dp">
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -114,7 +124,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/totalTxt"
+                    android:id="@+id/taxTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -162,16 +172,28 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckOut"
-                android:background="@drawable/boton_inicio"
                 android:layout_margin="16dp"
+                android:background="@drawable/boton_inicio"
                 android:gravity="center"
+                android:text="CheckOut"
                 android:textColor="#ffffff"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/emptyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu Carrito esta vacio"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -323,6 +345,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="170dp"
@@ -332,9 +355,8 @@
             app:backgroundTint="#13B6BA"
             app:maxImageSize="30dp"
             app:srcCompat="@drawable/carrito_2"
-            tools:srcCompat="@drawable/carrito_2"
 
-            >
+            tools:srcCompat="@drawable/carrito_2">
 
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
