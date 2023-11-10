@@ -27,7 +27,7 @@ private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerViewCategoryList();
+        recyclerViewCategory() ;
         recyclerViewPopular();
         bottomNavigation();
       }
@@ -50,7 +50,7 @@ private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
     }
 
 
-      private void recyclerViewCategoryList(){
+      private void recyclerViewCategory(){
           LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
           recyclerViewCategoryList = findViewById(R.id.recyclerView);
           recyclerViewCategoryList.setLayoutManager(linearLayoutManager);

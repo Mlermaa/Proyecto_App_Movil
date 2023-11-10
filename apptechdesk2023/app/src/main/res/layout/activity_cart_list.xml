@@ -224,7 +224,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -233,7 +233,7 @@
                         tools:srcCompat="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView20"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home
@@ -254,7 +254,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -263,7 +263,7 @@
                         tools:srcCompat="@drawable/apps" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Crear"
@@ -276,7 +276,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/homeBtn"
+                    android:id="@+id/homeBtn2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -290,7 +290,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -299,7 +299,7 @@
                         tools:srcCompat="@drawable/tareas" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Soluciones
@@ -329,7 +329,7 @@
                         tools:srcCompat="@drawable/usuario_2" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Perfil"

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.apptechdesk2023.Activity.Adaptor.CartListAadapter;
+import com.example.apptechdesk2023.Activity.Adaptor.CartListAdapter;
 import com.example.apptechdesk2023.Helper.ManagementCart;
 import com.example.apptechdesk2023.Interface.ChangeNumberItemListener;
 import com.example.apptechdesk2023.R;
@@ -70,7 +70,7 @@ public class CartListActivity extends AppCompatActivity {
     private void  initList(){
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
         recyclerViewList.setLayoutManager(linearLayoutManager);
-        adapter=new CartListAadapter(managementCart.getListCart(), this,  new ChangeNumberItemListener() {
+        adapter=new CartListAdapter(managementCart.getListCart(), this,  new ChangeNumberItemListener() {
             @Override
             public void changed() {
                 CalculateCart();
@@ -91,7 +91,7 @@ public class CartListActivity extends AppCompatActivity {
         double delivery = 10;
 
         tax = Math.round((managementCart.getTotalFee() * porcentTax) * 100)/100;
-        double total = Math.round((managementCart.getTotalFee() * tax + delivery) * 100) / 100;
+        double total = Math.round((managementCart.getTotalFee() + tax + delivery) * 100) / 100;
         double itemTotal = Math.round(managementCart.getTotalFee() * 100) / 100;
 
         totalFeeTxt.setText("$" + itemTotal);

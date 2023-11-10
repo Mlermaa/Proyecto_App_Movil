@@ -18,12 +18,12 @@ import com.example.apptechdesk2023.R;
 
 import java.util.ArrayList;
 
-public class CartListAadapter extends RecyclerView.Adapter<CartListAadapter.ViewHolder> {
+public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder> {
     private ArrayList<ProductosDomain> productosDomains;
     private ManagementCart managementCart;
     private ChangeNumberItemListener changeNumberItemListener;
 
-    public CartListAadapter(ArrayList<ProductosDomain> productosDomains, Context context, ChangeNumberItemListener changeNumberItemListener) {
+    public CartListAdapter(ArrayList<ProductosDomain> productosDomains, Context context, ChangeNumberItemListener changeNumberItemListener) {
         this.productosDomains = productosDomains;
         this.managementCart = new ManagementCart(context);
         this.changeNumberItemListener = changeNumberItemListener;
@@ -31,13 +31,13 @@ public class CartListAadapter extends RecyclerView.Adapter<CartListAadapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cart,parent,false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cart, parent,false);
 
         return new ViewHolder(inflate);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CartListAdapter.ViewHolder holder, int position) {
         holder.title.setText(productosDomains.get(position).getTitle());
         holder.feeEachItem.setText(String.valueOf(productosDomains.get(position).getFee()));
         holder.totalEachItem.setText(String.valueOf(Math.round((productosDomains.get(position).getNumberIncart() * productosDomains.get(position).getFee()) * 100)/ 100));
@@ -53,7 +53,7 @@ public class CartListAadapter extends RecyclerView.Adapter<CartListAadapter.View
         holder.plusItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                managementCart.plusNumberProductos(productosDomains, position, new ChangeNumberItemListener() {
+                managementCart.plusNumberProductos(productosDomains,position , new ChangeNumberItemListener() {
                     @Override
                     public void changed() {
                         notifyDataSetChanged();
@@ -80,6 +80,7 @@ public class CartListAadapter extends RecyclerView.Adapter<CartListAadapter.View
 
     @Override
     public int getItemCount() {
+
         return productosDomains.size();
     }
 
@@ -89,7 +90,7 @@ public class CartListAadapter extends RecyclerView.Adapter<CartListAadapter.View
         TextView totalEachItem, num;
         public ViewHolder(@NonNull View itemView) {
               super(itemView);
-              title=itemView.findViewById(R.id.titleTxt);
+              title = itemView.findViewById(R.id.titleTxt);
               feeEachItem = itemView.findViewById(R.id.feeEachItem);
               pic = itemView.findViewById(R.id.picCart);
               totalEachItem = itemView.findViewById(R.id.totalEachItem);

@@ -215,7 +215,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -224,7 +224,7 @@
                         tools:srcCompat="@drawable/home" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView55"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home
@@ -245,7 +245,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -254,7 +254,7 @@
                         tools:srcCompat="@drawable/apps" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Crear"
@@ -267,21 +267,21 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/homeBtn"
+                    android:id="@+id/cartBtn2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical" />
 
                 <LinearLayout
-                    android:id="@+id/solucionBtn"
+                    android:id="@+id/solucionBtn1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -290,7 +290,7 @@
                         tools:srcCompat="@drawable/tareas" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Soluciones
