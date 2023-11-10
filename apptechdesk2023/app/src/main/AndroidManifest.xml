@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Apptechdesk2023"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.Domain.MemoriasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Domain.PlacasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Domain.RefrigeradorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Domain.CPUActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login" />

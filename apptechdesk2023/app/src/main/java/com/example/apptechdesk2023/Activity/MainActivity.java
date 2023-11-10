@@ -1,5 +1,6 @@
 package com.example.apptechdesk2023.Activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,13 +8,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apptechdesk2023.Activity.Adaptor.CategoryAdaptor;
 import com.example.apptechdesk2023.Activity.Adaptor.PopularAdaptor;
+import com.example.apptechdesk2023.Activity.Domain.CPUActivity;
 import com.example.apptechdesk2023.Activity.Domain.CategoryDomain;
+import com.example.apptechdesk2023.Activity.Domain.MemoriasActivity;
+import com.example.apptechdesk2023.Activity.Domain.PlacasActivity;
 import com.example.apptechdesk2023.Activity.Domain.ProductosDomain;
+import com.example.apptechdesk2023.Activity.Domain.RefrigeradorActivity;
 import com.example.apptechdesk2023.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -22,11 +28,14 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 private RecyclerView.Adapter adapter, adapter2;
 private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
+private ConstraintLayout cpuBtn;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         TextView msg=(TextView)findViewById(R.id.bienvenida);
         String user = getIntent().getExtras().getString("usuario");
@@ -36,6 +45,35 @@ private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
         recyclerViewPopular();
         bottomNavigation();
       }
+
+
+
+
+    public void bottoCPU(View view){
+        Intent cpu = new Intent(this, CPUActivity.class);
+        startActivity(cpu);
+    }
+
+    public void bottoREFRIG(View view){
+        Intent refrig = new Intent(this, RefrigeradorActivity.class);
+        startActivity(refrig);
+    }
+    public void bottoPLACAS(View view){
+        Intent placas = new Intent(this, PlacasActivity.class);
+        startActivity(placas);
+    }
+
+    public void bottoMEMORIAS(View view){
+        Intent memorias = new Intent(this, MemoriasActivity.class);
+        startActivity(memorias);
+    }
+
+
+
+
+
+
+
     private void bottomNavigation(){
         FloatingActionButton floatingActionButton=findViewById(R.id.cartBtn);
         LinearLayout homeBtn=findViewById(R.id.homeBtn);
@@ -57,7 +95,7 @@ private  RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
 
       private void recyclerViewCategory(){
           LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-          recyclerViewCategoryList = findViewById(R.id.recyclerView);
+          recyclerViewCategoryList = findViewById(R.id.recyclerView2);
           recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
           ArrayList<CategoryDomain> category = new ArrayList<>();
