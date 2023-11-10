@@ -17,10 +17,12 @@ import com.example.apptechdesk2023.Activity.Adaptor.PopularAdaptor;
 import com.example.apptechdesk2023.Activity.Domain.CPUActivity;
 import com.example.apptechdesk2023.Activity.Domain.CategoryDomain;
 import com.example.apptechdesk2023.Activity.Domain.MemoriasActivity;
+import com.example.apptechdesk2023.Activity.Domain.PerfilActivity;
 import com.example.apptechdesk2023.Activity.Domain.PlacasActivity;
 import com.example.apptechdesk2023.Activity.Domain.ProductosDomain;
 import com.example.apptechdesk2023.Activity.Domain.RefrigeradorActivity;
 import com.example.apptechdesk2023.R;
+import com.example.apptechdesk2023.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -68,6 +70,19 @@ private ConstraintLayout cpuBtn;
         startActivity(memorias);
     }
 
+    public void bottoPERFIL(View view){
+        Intent perfil = new Intent(this, PerfilActivity.class);
+        startActivity(perfil);
+    }
+    public void bottoHOME(View view){
+        Intent home = new Intent(this, MainActivity.class);
+        startActivity(home);
+    }
+
+    public void bottoLOGIN(View view){
+        Intent login = new Intent(this, LoginActivity.class);
+        startActivity(login);
+    }
 
 
 
@@ -90,6 +105,7 @@ private ConstraintLayout cpuBtn;
                 startActivity(new Intent(MainActivity.this,MainActivity.class));
             }
         });
+
     }
 
 

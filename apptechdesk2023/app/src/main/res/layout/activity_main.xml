@@ -433,6 +433,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
 
+                        android:onClick="bottoPERFIL"
                         app:srcCompat="@drawable/usuario_2"
                         tools:srcCompat="@drawable/usuario_2" />
 
@@ -440,13 +441,13 @@
                         android:id="@+id/textView5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="bottoPERFIL"
                         android:text="Perfil"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
-                        android:textSize="12sp"
 
 
-                        />
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
 
